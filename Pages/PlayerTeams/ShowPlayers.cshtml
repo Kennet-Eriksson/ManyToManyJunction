@@ -1,0 +1,21 @@
+﻿@page
+@model EgetTest03.Pages.PlayerTeams.ShowPlayersModel
+@{
+    ViewData["Title"] = "ShowPlayers";
+}
+
+<h1>Select Player</h1>
+<hr>
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label class="control-label">Player</label>
+        <select asp-for="Pid" class="form-control"
+                asp-items="@(new SelectList(Model.Players, "Id", "Name"))">
+        </select>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Select" class="btn btn-primary" />
+    </div>
+</form>

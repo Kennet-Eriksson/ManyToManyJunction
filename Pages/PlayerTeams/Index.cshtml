@@ -1,0 +1,17 @@
+﻿@page
+@model EgetTest03.Pages.PlayerTeams.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Chose</h1>
+<form method="post">
+
+    @foreach (var sval in Model.SVals)
+    {
+        @Html.RadioButtonFor(modelsval => modelsval.SVal, sval) @sval<br>
+    }
+    <input type="submit">
+
+</form>
+

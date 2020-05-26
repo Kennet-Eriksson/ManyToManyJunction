@@ -1,0 +1,18 @@
+﻿@page
+@model EgetTest03.Pages.PlayerTeams.SelectPoTModel
+@{
+    ViewData["Title"] = "SelectPoT";
+}
+
+<h1>Select Players or Teams</h1>
+<h1>Chose</h1>
+<form method="post">
+
+    @foreach (var sval in Model.SVals)
+    {
+        @Html.RadioButtonFor(modelsval => modelsval.SVal, sval) @sval<br>
+    }
+    <input type="submit">
+
+</form>
+
